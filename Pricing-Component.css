@@ -1,0 +1,214 @@
+/* General Styles */
+body {
+    font-family: "Poppins", sans-serif;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+.pricing-container {
+    text-align: center;
+    padding: 40px 20px;
+    max-width: 900px; /* Adjusted for better laptop view */
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
+h1 {
+    font-size: 2.4rem;
+    color: #1a202c;
+    margin-bottom: 10px;
+}
+
+.sub-heading {
+    color: #4a5568;
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+.toggle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.toggle-container span {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #cbd5e0;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 17px;
+    width: 17px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+input:checked + .slider {
+    background-color: #2b6cb0;
+}
+
+input:checked + .slider:before {
+    transform: translateX(24px);
+}
+
+/* Pricing Cards */
+.pricing-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    color: #2d3748;
+    margin-bottom: 10px;
+}
+
+.card .price {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #2b6cb0;
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.card ul li {
+    font-size: 0.95rem;
+    color: #4a5568;
+    margin-bottom: 10px;
+    display: flex; /* For aligning icon and text */
+    align-items: center;
+    gap: 10px; /* Space between icon and text */
+}
+
+/* Add a custom icon beside each <li> */
+.card ul li::before {
+    content: "✔"; /* Replace this with a Unicode character or symbol */
+    color: #2b6cb0; /* Icon color */
+    font-size: 1rem;
+    margin-right: 5px;
+}
+
+
+.card button {
+    margin-top: 15px;
+    background: #2b6cb0;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.card button:hover {
+    background: #1a4e8b;
+}
+
+/* Featured Card */
+.card.featured {
+    border: 2px solid #2b6cb0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card.featured h2 {
+    color: #2b6cb0;
+}
+
+.card.featured .price {
+    color: #1a202c;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .sub-heading {
+        font-size: 0.9rem;
+    }
+
+    .card h2 {
+        font-size: 1.4rem;
+    }
+
+    .card .price {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .card ul li {
+        font-size: 0.85rem;
+    }
+
+    .card button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
