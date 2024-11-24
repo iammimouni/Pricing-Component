@@ -1,4 +1,5 @@
 /* General Styles */
+
 body {
     font-family: "Poppins", sans-serif;
     background-size: cover;
@@ -14,7 +15,8 @@ body {
 .pricing-container {
     text-align: center;
     padding: 40px 20px;
-    max-width: 900px; /* Adjusted for better laptop view */
+    max-width: 900px;
+    /* Adjusted for better laptop view */
     background: white;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -83,15 +85,17 @@ h1 {
     transition: 0.3s;
 }
 
-input:checked + .slider {
+input:checked+.slider {
     background-color: #2b6cb0;
 }
 
-input:checked + .slider:before {
+input:checked+.slider:before {
     transform: translateX(24px);
 }
 
+
 /* Pricing Cards */
+
 .pricing-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -139,19 +143,24 @@ input:checked + .slider:before {
     font-size: 0.95rem;
     color: #4a5568;
     margin-bottom: 10px;
-    display: flex; /* For aligning icon and text */
+    display: flex;
+    /* For aligning icon and text */
     align-items: center;
-    gap: 10px; /* Space between icon and text */
+    gap: 10px;
+    /* Space between icon and text */
 }
 
+
 /* Add a custom icon beside each <li> */
+
 .card ul li::before {
-    content: "✔"; /* Replace this with a Unicode character or symbol */
-    color: #2b6cb0; /* Icon color */
+    content: "✔";
+    /* Replace this with a Unicode character or symbol */
+    color: #2b6cb0;
+    /* Icon color */
     font-size: 1rem;
     margin-right: 5px;
 }
-
 
 .card button {
     margin-top: 15px;
@@ -169,7 +178,9 @@ input:checked + .slider:before {
     background: #1a4e8b;
 }
 
+
 /* Featured Card */
+
 .card.featured {
     border: 2px solid #2b6cb0;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -183,20 +194,19 @@ input:checked + .slider:before {
     color: #1a202c;
 }
 
+
 /* Responsive Typography */
+
 @media (max-width: 768px) {
     h1 {
         font-size: 1.8rem;
     }
-
     .sub-heading {
         font-size: 0.9rem;
     }
-
     .card h2 {
         font-size: 1.4rem;
     }
-
     .card .price {
         font-size: 1.5rem;
     }
@@ -206,7 +216,6 @@ input:checked + .slider:before {
     .card ul li {
         font-size: 0.85rem;
     }
-
     .card button {
         font-size: 0.9rem;
         padding: 8px 16px;

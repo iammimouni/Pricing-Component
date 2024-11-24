@@ -1,62 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Professional Pricing Component</title>
     <link rel="stylesheet" href="Pricing-Component.css">
 </head>
+
 <body>
-<div class="pricing-container">
-    <h1>Pricing Component</h1>
-    <p class="sub-heading">Choose the plan that fits your needs. Cancel anytime.</p>
-    <div class="toggle-container">
-        <span>Monthly</span>
-        <label class="switch">
+    <div class="pricing-container">
+        <h1>Pricing Component</h1>
+        <p class="sub-heading">Choose the plan that fits your needs. Cancel anytime.</p>
+        <div class="toggle-container">
+            <span>Monthly</span>
+            <label class="switch">
             <input type="checkbox" id="pricing-toggle">
             <span class="slider"></span>
         </label>
-        <span>Yearly</span>
+            <span>Yearly</span>
+        </div>
+        <div class="pricing-cards">
+            <div class="card">
+                <h2>Basic</h2>
+                <p class="price">
+                    $<span class="price-value" data-month="19" data-year="190">19</span>/mo
+                </p>
+                <ul>
+                    <li>10 GB Storage</li>
+                    <li>Email Support</li>
+                    <li>Access to All Features</li>
+                </ul>
+                <button>Choose Plan</button>
+            </div>
+            <div class="card featured">
+                <h2>Pro</h2>
+                <p class="price">
+                    $<span class="price-value" data-month="49" data-year="490">49</span>/mo
+                </p>
+                <ul>
+                    <li>50 GB Storage</li>
+                    <li>Priority Email Support</li>
+                    <li>Customizable Dashboard</li>
+                </ul>
+                <button>Choose Plan</button>
+            </div>
+            <div class="card">
+                <h2>Enterprise</h2>
+                <p class="price">
+                    $<span class="price-value" data-month="99" data-year="990">99</span>/mo
+                </p>
+                <ul>
+                    <li>Unlimited Storage</li>
+                    <li>24/7 Support</li>
+                    <li>Dedicated Account Manager</li>
+                </ul>
+                <button>Choose Plan</button>
+            </div>
+        </div>
     </div>
-    <div class="pricing-cards">
-        <div class="card">
-            <h2>Basic</h2>
-            <p class="price">
-                $<span class="price-value" data-month="19" data-year="190">19</span>/mo
-            </p>
-            <ul>
-                <li>10 GB Storage</li>
-                <li>Email Support</li>
-                <li>Access to All Features</li>
-            </ul>
-            <button>Choose Plan</button>
-        </div>
-        <div class="card featured">
-            <h2>Pro</h2>
-            <p class="price">
-                $<span class="price-value" data-month="49" data-year="490">49</span>/mo
-            </p>
-            <ul>
-                <li>50 GB Storage</li>
-                <li>Priority Email Support</li>
-                <li>Customizable Dashboard</li>
-            </ul>
-            <button>Choose Plan</button>
-        </div>
-        <div class="card">
-            <h2>Enterprise</h2>
-            <p class="price">
-                $<span class="price-value" data-month="99" data-year="990">99</span>/mo
-            </p>
-            <ul>
-                <li>Unlimited Storage</li>
-                <li>24/7 Support</li>
-                <li>Dedicated Account Manager</li>
-            </ul>
-            <button>Choose Plan</button>
-        </div>
-    </div>
-</div>
-<script src="Pricing-Component.js"></script>
+    <script src="Pricing-Component.js"></script>
 </body>
+
 </html>
